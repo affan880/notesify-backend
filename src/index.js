@@ -9,11 +9,6 @@ const fs = require('fs');
 require('dotenv').config();
 
 
-
-
-
-
-
 // Set up the storage engine for multer
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -28,7 +23,6 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const REDIRECT_URI = process.env.REDIRECT_URI;
 const REFRESH_TOKEN = process.env.REFRESH_TOKEN;
-const PORT = process.env.PORT || 3000;
 const upload = multer({ storage: storage });
 
 const oAuth2Client = new google.auth.OAuth2(
